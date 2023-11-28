@@ -1,8 +1,8 @@
 site_name: Освоение алгоритмов
 
 nav:
+  - Главная: index.md
   - Начало:
-    - Привет!: section_1/index.md
     - Начнём: section_1/page_1.md
   - Массивы и хеш-структуры:
     - Введение: arrays/index.md
