@@ -1,5 +1,0 @@
-# Hi there!
-
-
-
-asomfaofm
