@@ -2,8 +2,6 @@ site_name: Освоение алгоритмов
 
 nav:
   - Главная: index.md
-  - Начало:
-    - Начнём: section_1/page_1.md
   - Массивы и хеш-структуры:
     - Введение: arrays/index.md
     - Two sum: arrays/two_sum.md
@@ -94,15 +92,15 @@ nav:
     - Design Twitter: priority_queue/design_twitter.md
     - Find Median from Data Stream: priority_queue/find_median_from_data_stream.md
   - Жадные алгоритмы:
-    - Введение: greedy/index.md
-    - Maximum Subarray: greedy/maximum_subarray.md
-    - Jump Game: greedy/jump_game.md
-    - Jump Game II: greedy/jump_game_ii.md
-    - Gas Station: greedy/gas_station.md
-    - Hand of Straights: greedy/hand_of_straights.md
-    - Merge Triplets to Form Target Triplet: greedy/merge_triplets_to_form_target_triplet.md
-    - Partition Labels: greedy/partition_labels.md
-    - Valid Parenthesis String: greedy/valid_parenthesis_string.md
+    - Введение: greedy_algorithms/index.md
+    - Maximum Subarray: greedy_algorithms/maximum_subarray.md
+    - Jump Game: greedy_algorithms/jump_game.md
+    - Jump Game II: greedy_algorithms/jump_game_ii.md
+    - Gas Station: greedy_algorithms/gas_station.md
+    - Hand of Straights: greedy_algorithms/hand_of_straights.md
+    - Merge Triplets to Form Target Triplet: greedy_algorithms/merge_triplets_to_form_target_triplet.md
+    - Partition Labels: greedy_algorithms/partition_labels.md
+    - Valid Parenthesis String: greedy_algorithms/valid_parenthesis_string.md
   - Графы:
     - Введение: graphs/index.md
     - Number of Islands: graphs/number_of_islands.md
@@ -126,51 +124,51 @@ nav:
     - Longest Increasing Path in a Matrix: advanced_graphs/longest_increasing_path_in_a_matrix.md
     - Cheapest Flights Within K Stops: advanced_graphs/cheapest_flights_within_k_stops.md
   - Одномерное ДП:
-    - Введение: dp_1d/index.md
-    - Climbing Stairs: dp_1d/climbing_stairs.md
-    - Min Cost Climbing Stairs: dp_1d/min_cost_climbing_stairs.md
-    - House Robber: dp_1d/house_robber.md
-    - House Robber II: dp_1d/house_robber_ii.md
-    - Longest Palindromic Substring: dp_1d/longest_palindromic_substring.md
-    - Palindromic Substrings: dp_1d/palindromic_substrings.md
-    - Decode Ways: dp_1d/decode_ways.md
-    - Coin Change: dp_1d/coin_change.md
-    - Maximum Product Subarray: dp_1d/maximum_product_subarray.md
-    - Word Break: dp_1d/word_break.md
-    - Longest Increasing Subsequence: dp_1d/longest_increasing_subsequence.md
-    - Partition Equal Subset Sum: dp_1d/partition_equal_subset_sum.md
+    - Введение: 1d_dp/index.md
+    - Climbing Stairs: 1d_dp/climbing_stairs.md
+    - Min Cost Climbing Stairs: 1d_dp/min_cost_climbing_stairs.md
+    - House Robber: 1d_dp/house_robber.md
+    - House Robber II: 1d_dp/house_robber_ii.md
+    - Longest Palindromic Substring: 1d_dp/longest_palindromic_substring.md
+    - Palindromic Substrings: 1d_dp/palindromic_substrings.md
+    - Decode Ways: 1d_dp/decode_ways.md
+    - Coin Change: 1d_dp/coin_change.md
+    - Maximum Product Subarray: 1d_dp/maximum_product_subarray.md
+    - Word Break: 1d_dp/word_break.md
+    - Longest Increasing Subsequence: 1d_dp/longest_increasing_subsequence.md
+    - Partition Equal Subset Sum: 1d_dp/partition_equal_subset_sum.md
   - Двумерное ДП:
-    - Введение: dp_2d/index.md
-    - Unique Paths: dp_2d/unique_paths.md
-    - Longest Common Subsequence: dp_2d/longest_common_subsequence.md
-    - Best Time to Buy and Sell Stock with Cooldown: dp_2d/best_time_to_buy_and_sell_stock_with_cooldown.md
-    - Coin Change 2: dp_2d/coin_change_2.md
-    - Target Sum: dp_2d/target_sum.md
-    - Interleaving String: dp_2d/interleaving_string.md
-    - Longest Increasing Path in a Matrix: dp_2d/longest_increasing_path_in_a_matrix.md
-    - Distinct Subsequences: dp_2d/distinct_subsequences.md
-    - Edit Distance: dp_2d/edit_distance.md
-    - Burst Balloons: dp_2d/burst_balloons.md
-    - Regular Expression Matching: dp_2d/regular_expression_matching.md
+    - Введение: 2d_dp/index.md
+    - Unique Paths: 2d_dp/unique_paths.md
+    - Longest Common Subsequence: 2d_dp/longest_common_subsequence.md
+    - Best Time to Buy and Sell Stock with Cooldown: 2d_dp/best_time_to_buy_and_sell_stock_with_cooldown.md
+    - Coin Change 2: 2d_dp/coin_change_2.md
+    - Target Sum: 2d_dp/target_sum.md
+    - Interleaving String: 2d_dp/interleaving_string.md
+    - Longest Increasing Path in a Matrix: 2d_dp/longest_increasing_path_in_a_matrix.md
+    - Distinct Subsequences: 2d_dp/distinct_subsequences.md
+    - Edit Distance: 2d_dp/edit_distance.md
+    - Burst Balloons: 2d_dp/burst_balloons.md
+    - Regular Expression Matching: 2d_dp/regular_expression_matching.md
   - Битовые операции:
-    - Введение: bit_manipulation/index.md
-    - Single Number: bit_manipulation/single_number.md
-    - Number of 1 Bits: bit_manipulation/number_of_1_bits.md
-    - Counting Bits: bit_manipulation/counting_bits.md
-    - Reverse Bits: bit_manipulation/reverse_bits.md
-    - Missing Number: bit_manipulation/missing_number.md
-    - Sum of Two Integers: bit_manipulation/sum_of_two_integers.md
-    - Reverse Integer: bit_manipulation/reverse_integer.md
+    - Введение: bit_operations/index.md
+    - Single Number: bit_operations/single_number.md
+    - Number of 1 Bits: bit_operations/number_of_1_bits.md
+    - Counting Bits: bit_operations/counting_bits.md
+    - Reverse Bits: bit_operations/reverse_bits.md
+    - Missing Number: bit_operations/missing_number.md
+    - Sum of Two Integers: bit_operations/sum_of_two_integers.md
+    - Reverse Integer: bit_operations/reverse_integer.md
   - Математика и геометрия:
-    - Введение: math_geometry/index.md
-    - Rotate Image: math_geometry/rotate_image.md
-    - Spiral Matrix: math_geometry/spiral_matrix.md
-    - Set Matrix Zeroes: math_geometry/set_matrix_zeroes.md
-    - Happy Number: math_geometry/happy_number.md
-    - Plus One: math_geometry/plus_one.md
-    - Pow(x, n): math_geometry/powx_n.md
-    - Multiply Strings: math_geometry/multiply_strings.md
-    - Detect Squares: math_geometry/detect_squares.md
+    - Введение: math_and_geometry/index.md
+    - Rotate Image: math_and_geometry/rotate_image.md
+    - Spiral Matrix: math_and_geometry/spiral_matrix.md
+    - Set Matrix Zeroes: math_and_geometry/set_matrix_zeroes.md
+    - Happy Number: math_and_geometry/happy_number.md
+    - Plus One: math_and_geometry/plus_one.md
+    - Pow(x, n): math_and_geometry/powx_n.md
+    - Multiply Strings: math_and_geometry/multiply_strings.md
+    - Detect Squares: math_and_geometry/detect_squares.md
 
 
 theme:
