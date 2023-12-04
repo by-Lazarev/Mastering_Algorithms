@@ -8,9 +8,9 @@
 
 Задания, для которых есть решение от меня отмечены ✅ 
 
+* [Contains duplicate ✅](contains_duplicate.md)
 * [Two sum ✅](two_sum.md)
-* [valid-anagram](https://leetcode.com/problems/valid-anagram/)
-* [Contains duplicate](https://leetcode.com/problems/contains-duplicate/)
+* [Valid anagram ✅](valid_anagram.md)
 * [group-anagrams](https://leetcode.com/problems/group-anagrams/)
 * [top-k-frequent-elements](https://leetcode.com/problems/top-k-frequent-elements/)
 * [product-of-array-except-self](https://leetcode.com/problems/product-of-array-except-self/)
