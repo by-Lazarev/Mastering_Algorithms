@@ -11,7 +11,7 @@
 * [Contains duplicate ✅](contains_duplicate.md)
 * [Two sum ✅](two_sum.md)
 * [Valid anagram ✅](valid_anagram.md)
-* [group-anagrams](https://leetcode.com/problems/group-anagrams/)
+* [Group Anagrams ✅](group_anagrams.md)
 * [top-k-frequent-elements](https://leetcode.com/problems/top-k-frequent-elements/)
 * [product-of-array-except-self](https://leetcode.com/problems/product-of-array-except-self/)
 * [valid-sudoku](https://leetcode.com/problems/valid-sudoku/)
