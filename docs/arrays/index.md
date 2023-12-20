@@ -13,7 +13,7 @@
 * [Valid anagram ✅](valid_anagram.md)
 * [Group anagrams ✅](group_anagrams.md)
 * [Top k frequent elements ✅](top_k_frequent_elements.md)
-* [product-of-array-except-self](https://leetcode.com/problems/product-of-array-except-self/)
+* [Product of array except self ✅](product_of_array_except_self.md)
 * [valid-sudoku](https://leetcode.com/problems/valid-sudoku/)
 * [largest-number](https://leetcode.com/problems/largest-number/description/)
 * [longest-consecutive-sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
