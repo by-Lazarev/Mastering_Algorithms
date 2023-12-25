@@ -14,7 +14,7 @@
 * [Group anagrams ✅](group_anagrams.md)
 * [Top k frequent elements ✅](top_k_frequent_elements.md)
 * [Product of array except self ✅](product_of_array_except_self.md)
-* [valid-sudoku](https://leetcode.com/problems/valid-sudoku/)
+* [Valid sudoku ✅](valid_sudoku.md)
 * [largest-number](https://leetcode.com/problems/largest-number/description/)
 * [longest-consecutive-sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
