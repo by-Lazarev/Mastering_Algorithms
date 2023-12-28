@@ -2,6 +2,8 @@ site_name: Освоение алгоритмов
 
 nav:
   - Главная: index.md
+  - Учебные материалы:
+    - Нотация "Большая О": edutorial/big_o_notation.md 
   - Массивы и хеш-структуры:
     - Введение: arrays/index.md
     - Two sum: arrays/two_sum.md
