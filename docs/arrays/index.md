@@ -6,15 +6,13 @@
 
 ## Список заданий по этой теме:
 
-Задания, для которых есть решение от меня отмечены ✅ 
-
-* [Contains duplicate ✅](contains_duplicate.md)
-* [Two sum ✅](two_sum.md)
-* [Valid anagram ✅](valid_anagram.md)
-* [Group anagrams ✅](group_anagrams.md)
-* [Top k frequent elements ✅](top_k_frequent_elements.md)
-* [Product of array except self ✅](product_of_array_except_self.md)
-* [Valid sudoku ✅](valid_sudoku.md)
-* [Largest Number ✅](largest_number.md)
-* [Longest Consecutive Sequence ✅](longest_consecutive_sequence.md)
+* [Contains duplicate](contains_duplicate.md)
+* [Two sum](two_sum.md)
+* [Valid anagram](valid_anagram.md)
+* [Group anagrams](group_anagrams.md)
+* [Top k frequent elements](top_k_frequent_elements.md)
+* [Product of array except self](product_of_array_except_self.md)
+* [Valid sudoku](valid_sudoku.md)
+* [Largest Number](largest_number.md)
+* [Longest Consecutive Sequence](longest_consecutive_sequence.md)
 
