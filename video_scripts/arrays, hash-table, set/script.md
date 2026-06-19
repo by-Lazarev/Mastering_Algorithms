@@ -556,7 +556,7 @@ fn main() {
 
 Пример на Python:
 ```python
-# 12. python - пример задачи(решение используя список)
+# 13. python - пример задачи(решение используя список)
 def has_duplicates_naive(arr):
     n = len(arr)
     for i in range(n):
@@ -579,7 +579,7 @@ def has_duplicates_naive(arr):
 
 Пример на Python:
 ```python
-# 13. python - пример задачи(решение используя множество)
+# 14. python - пример задачи(решение используя множество)
 def has_duplicates_set(arr):
     seen = set()
     for x in arr:
