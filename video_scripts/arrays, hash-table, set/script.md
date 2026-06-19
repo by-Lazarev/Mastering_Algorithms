@@ -266,7 +266,7 @@ print(ages)          # {'Alice': 28, 'Bob': 32, 'Carol': 25, 'Dave': 30}
 
 Пример на Go:
 ```go
-//6. go - хэш-таблица (map)
+// 6. go - хэш-таблица (map)
 package main
 
 import "fmt"
@@ -304,7 +304,7 @@ func main() {
 Пример на C++:
 
 ```cpp
-//7. cpp - хэш-таблица (unordered_map)
+// 7. cpp - хэш-таблица (unordered_map)
 #include <unordered_map>
 #include <iostream>
 #include <string>
@@ -338,7 +338,7 @@ int main() {
 Пример на Rust:
 
 ```rust
-//8. rust - хэш-таблица (HashMap)
+// 8. rust - хэш-таблица (HashMap)
 
 use std::collections::HashMap;
 
