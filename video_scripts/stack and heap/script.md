@@ -32,108 +32,132 @@
 #### Python
 В Python можно использовать готовую реализацию стека из стандартной библиотеки — `queue.LifoQueue`. `LifoQueue` работает по принципу *last in*, *first out*, то есть реализует именно стек.
 ```python
+# 1. Python - стек(LifoQueue)
 from queue import LifoQueue
 
 stack = LifoQueue()
 
-stack.put(10)   # push
+stack.put(10)
 stack.put(20)
 stack.put(30)
 
-top = stack.get()   # pop -> 30
+top = stack.get()
 print(top)          # 30
 
 stack.put(40)
 
-next_top = stack.get()  # pop -> 40
+next_top = stack.get()
 print(next_top)         # 40
 ```
+Разберём код подробнее:
+
+`stack.put(10)` - добавляет элемент "на верх"
+
+`stack.get()` - получает "верхний" элемент и удаляет его.
 
 Стандартный интерфейс `LifoQueue` не поддерживает просмотр верхнего элемента без удаления, но есть множество других реализаций, которые позволяют посмотреть последний элемент и предоставляют другие возможности.
 #### Go
 В Go нет встроенного типа `stack`, но идиоматичная реализация — структура поверх слайса.
 ```go
-// Go — stack
+// 2. Go — стек
+
+package main
+
+import "fmt"
 
 type Stack struct {
-    items []int
+	items []int
 }
 
 func (s *Stack) Push(value int) {
-    s.items = append(s.items, value)
+	s.items = append(s.items, value)
 }
 
 func (s *Stack) Pop() (int, bool) {
-    if len(s.items) == 0 {
-        return 0, false
-    }
-    n := len(s.items) - 1
-    value := s.items[n]
-    s.items = s.items[:n]
-    return value, true
+	if len(s.items) == 0 {
+		return 0, false
+	}
+	n := len(s.items) - 1
+	value := s.items[n]
+	s.items = s.items[:n]
+	return value, true
 }
 
 func (s *Stack) Peek() (int, bool) {
-    if len(s.items) == 0 {
-        return 0, false
-    }
-    return s.items[len(s.items)-1], true
+	if len(s.items) == 0 {
+		return 0, false
+	}
+	return s.items[len(s.items)-1], true
 }
 
 func (s *Stack) IsEmpty() bool {
-    return len(s.items) == 0
+	return len(s.items) == 0
 }
 
 func (s *Stack) String() string {
-    return fmt.Sprint(s.items)
+	return fmt.Sprint(s.items)
 }
 
-func exampleStack() {
-    var stack Stack
+func main() {
+	var stack Stack
 
-    stack.Push(10)
-    stack.Push(20)
-    stack.Push(30)
+	stack.Push(10)
+	stack.Push(20)
+	stack.Push(30)
 
-    print(stack) // [10 20 30]
+	top, _ := stack.Pop()
+	fmt.Println(top) // 30
 
-    top, _ := stack.Peek()
-    print(top)   // 30
+	stack.Push(40)
 
-    value, _ := stack.Pop()
-    print(value) // 30
-    print(stack) // [10 20]
+	nextTop, _ := stack.Pop()
+	fmt.Println(nextTop) // 40
 }
 ```
+Разберём код подробнее:
+
+`stack.Push(10)` - добавляет элемент "на верх"
+
+`stack.Pop()` - получает "верхний" элемент и удаляет его.
+
 #### C++
 В C++ есть `std::stack`, который прямо реализует LIFO-структуру.
 
 ```cpp
+// 3. Cpp — стек(stack)
 #include <stack>
+#include <iostream>
 
-void example_stack() {
+int main() {
     std::stack<int> stack;
 
     stack.push(10);
     stack.push(20);
     stack.push(30);
 
-    print(stack);        //  — абстрактный вывод[3][1][2]
-
     int top = stack.top();
-    print(top);          // 30
-
     stack.pop();
+    std::cout << top << '\n'; // 30
 
-    print(stack);        //[1][2]
+    stack.push(40);
+
+    int next_top = stack.top();
+    stack.pop();
+    std::cout << next_top << '\n'; // 40
 }
 ```
+Разберём код подробнее:
+
+`stack.push(10)` - добавляет элемент "на верх"
+
+`stack.top()` - получает "верхний" элемент и удаляет его.
 
 Здесь `std::stack` по умолчанию использует `std::deque` как внутренний контейнер,  
 но на уровне абстракции нас интересуют только операции `push`, `pop`, `top` и `empty`.
 #### Rust
 В Rust нет отдельного типа `Stack`, но стандартный `Vec<T>` подходит для реализации стека: `push` добавляет элемент в конец, а `pop` снимает последний элемент.
 ```rust
+// 4. Rust — стек(Vec<T>)
 struct Stack<T> {
     items: Vec<T>,
 }
@@ -160,26 +184,29 @@ impl<T> Stack<T> {
     }
 }
 
-fn example_stack() {
-    let mut stack = Stack { items: vec![] };
+fn main() {
+    let mut stack = Stack::new();
 
     stack.push(10);
     stack.push(20);
     stack.push(30);
 
-    print(&stack.items);          //[2][3][1]
-
-    if let Some(top) = stack.peek() {
-        print(top);               // 30
+    if let Some(top) = stack.pop() {
+        println!("{}", top); // 30
     }
 
-    if let Some(value) = stack.pop() {
-        print(value);             // 30
-    }
+    stack.push(40);
 
-    print(&stack.items);          //[1][2]
+    if let Some(next_top) = stack.pop() {
+        println!("{}", next_top); // 40
+    }
 }
 ```
+Разберём код подробнее:
+
+`stack.push(10)` - добавляет элемент "на верх"
+
+`stack.pop()` - получает "верхний" элемент и удаляет его.
 
 Во всех четырёх языках мы получили одну и ту же абстракцию: тип `Stack` с методами `push`, `pop`, `is_empty`, `peek` (кроме Python). Во всех примерах стек работает по принципу LIFO, независимо от деталей реализации.
 ### Где используется стек
@@ -247,11 +274,11 @@ heap -> [10, 30, 20]
 ### Реализации
 Теперь посмотрим, как куча представлена в популярных языках.
 
+#### Python
 В Python используется модуль `heapq`. Он работает поверх обычного списка и реализует **min-heap**, то есть на вершине всегда минимальный элемент.
 ```python
+# 5. Python — heap (min-heap)
 import heapq
-
-# Python — heap (min-heap)
 
 heap = []
 
@@ -259,84 +286,140 @@ heapq.heappush(heap, 30)
 heapq.heappush(heap, 10)
 heapq.heappush(heap, 20)
 
-print(heap)          
+print(heap) #[10,30,20]
 
 top = heapq.heappop(heap)
-print(top)
-print(heap)
+print(top) #10
+print(heap) #[20, 30]
 ```
+Разберём код подробнее:
+
+`heapq.heappush(heap, 30)` - добавляет элемент
+
+`heapq.heappop(heap)` - получает "верхний" элемент и удаляет его.
+
+#### Go
 
 В Go есть пакет `container/heap`, который предоставляет функции `heap.Init`, `heap.Push`, `heap.Pop` и другие. Чтобы им пользоваться, необходимо описать свой тип кучи — например, `IntHeap` для целых чисел — и сделать его совместимым с `container/heap`.  
 Детали того, как именно устроен `IntHeap`, мы здесь опустим, важна сама идея использования
 ```go
-import "container/heap"
+// 6. Go — heap (IntHeap)
+package main
+
+import (
+	"container/heap"
+	"fmt"
+)
 
 // считаем, что IntHeap уже реализован и совместим с container/heap
 // под капотом там хранится слайс чисел и поддерживается свойство кучи
 
-func exampleHeap() {
-    h := &IntHeap{}   // создаём пустую кучу
-    heap.Init(h)      // инициализируем её
+func main() {
+	h := &IntHeap{}
+	heap.Init(h)
 
-    heap.Push(h, 30)
-    heap.Push(h, 10)
-    heap.Push(h, 20)
+	heap.Push(h, 30)
+	heap.Push(h, 10)
+	heap.Push(h, 20)
 
-    print(*h)         // внутренняя структура кучи, порядок не обязательно отсортированный
+	fmt.Println(*h) // [10 30 20]
 
-    minValue := heap.Pop(h).(int)  // извлекаем минимальный элемент
-    print(minValue)   // 10
+	minValue := heap.Pop(h).(int)
+	fmt.Println(minValue) // 10
 
-    print(*h)         // куча после удаления минимума
+	fmt.Println(*h) // [20 30]
 }
 ```
+Разберём код подробнее:
+
+`heap.Init(h)` - объявляет кучу.
+
+`heap.Push(h, 30)` - добавляет элемент
+
+`heap.Pop(h)` - получает "верхний" элемент и удаляет его.
+
 >  Функции из `container/heap` гарантируют, что после каждого `Push` и `Pop` внутренняя структура остаётся корректной min-heap.
 
+#### C++
 В C++ стандартная структура для этого — `std::priority_queue`. По умолчанию она работает как **max-heap**, то есть наверху будет максимальный элемент.
 ```cpp
+// 7. cpp — heap (priority_queue)
+#include <iostream>
 #include <queue>
 #include <vector>
 #include <functional>
 
-void example_heap() {
+int main() {
     std::priority_queue<int, std::vector<int>, std::greater<int>> heap;
 
     heap.push(30);
     heap.push(10);
     heap.push(20);
 
-    print(heap.top()); // 10
+    for (auto copy = heap; !copy.empty(); copy.pop()) {
+        std::cout << copy.top() << ' ';
+    }
+    std::cout << "\n"; // 10 20 30
 
+    int top = heap.top();
     heap.pop();
+    std::cout << top << "\n"; // 10
 
-    print(heap.top()); // 20
+     for (auto copy = heap; !copy.empty(); copy.pop()) {
+        std::cout << copy.top() << ' ';
+    }
+    std::cout << "\n"; // 20 30
 }
 ```
+Разберём код подробнее:
+
+`heap.push(30)` - добавляет элемент
+`heap.top()` - получает "верхний" элемент
+`heap.pop()` - удаляет "верхний" элемент.
+
+
+#### Rust
 
 В Rust используется структура `BinaryHeap`. По умолчанию она работает как **max-heap**, то есть наверху будет максимальный элемент.
 ```rust
+// 8. rust — heap (BinaryHeap)
 use std::cmp::Reverse;
 use std::collections::BinaryHeap;
+
+fn print_heap(heap: &BinaryHeap<Reverse<i32>>) {
+    let mut copy = heap.clone();
+
+    while let Some(Reverse(value)) = copy.pop() {
+        print!("{} ", value);
+    }
+    println!();
+}
 
 fn example_heap() {
     let mut heap = BinaryHeap::new();
 
-    heap.push(30);
-    heap.push(10);
-    heap.push(20);
+    heap.push(Reverse(30));
+    heap.push(Reverse(10));
+    heap.push(Reverse(20));
 
-    print(&heap);
+    print_heap(&heap); // 10 20 30 
 
     let top = heap.pop().unwrap();
-    print(top.0);
+    println!("{}", top.0); // 10
 
-    print(&heap);
+    print_heap(&heap); // 20 30 
 }
 ```
+Разберём код подробнее:
+
+`heap.push(Reverse(30));` - добавляет элемент.
+
+`heap.pop().unwrap()` - получает "верхний" элемент и удаляет его.
+
 ### Где используется куча
 Разберём задачи которые используют кучу:
 
-Во-первых, задачи на реализацию **priority queue** - приоритетной очереди. Это может быть работа со списоком с событий, таймеров, запросов или процессов. В них нам нужно каждый раз брать следующий “самый важный” элемент. Так же куча удобна при слиянии нескольких отсортированных потоков данных. Например, если у нас есть несколько отсортированных списков, мы можем держать их текущие минимумы в куче и каждый раз доставать наименьший из них.
+Во-первых, задачи на реализацию **priority queue** - приоритетной очереди. Это может быть работа со списоком событий, таймеров, запросов или процессов. В них нам нужно каждый раз брать следующий “самый важный” элемент. Так же куча удобна при слиянии нескольких отсортированных потоков данных. Например, если у нас есть несколько отсортированных списков, мы можем держать их текущие минимумы в куче и каждый раз доставать наименьший из них.
 
 Во-вторых, куча используется в задачах на поиск `k` минимальных, максимальных или часто встречающихся элементов. Сюда же можно отнести задачи на поиск медианы в потоке однообразных данных. В таких алгоритмах нет необходимости сортировать весь список значений и использование кучи будет эффективно.
 
